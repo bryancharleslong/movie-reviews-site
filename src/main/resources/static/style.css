@@ -3,6 +3,7 @@ body {
 	background-color: #EEEEEE;
 	font-size: 18px;
 	text-align: center;
+	font-family: Arial, Helvetica, Sans-Serif;
 }
 
 h1 {
@@ -24,10 +25,11 @@ li {
 	position: relative;
 	left: 50%;
 	margin-left: -150px;
-	width: 300px;
 }
 
-.author, .content {
+.content {
 	white-space: pre-line;
 	text-align: left;
+	margin-left: 15%;
+	margin-right:15%;
 }
