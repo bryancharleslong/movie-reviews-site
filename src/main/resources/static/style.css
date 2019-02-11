@@ -1,0 +1,29 @@
+body {
+ 	color: #414141;
+ 	background-color: #EEEEEE;
+ 	font-size: 18px;
+ 	text-align: center;
+}
+span{
+ 	white-space: pre-line;
+ 	text-align: left;
+}
+h1 {
+	font-size: 2em;
+}
+h2 {
+	font-size: 1.3em;
+}
+h3 {
+	font-size: 1em;
+}
+li {
+	width: 300px;
+	text-align: left;
+	position: relative;
+	left: 50%;
+	margin-left: -150px;
+}
+.author {
+	text-align: left;
+}

@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
+	<meta charset='UTF-8'/>
 	<title>Reviews</title>
+	<link rel='stylesheet' href='style.css'/>
 </head>
 <body>
-	<h1>A list of reviews</h1>
-	<div th:each="review: ${reviews}">
-		<li>
-		<a th:href="@{/review(id=${review.id})}" th:text="${review.title}"></a>
-		</li>
+	<h1>Reviews</h1>
+	<div th:each="review: ${reviews}">	
+		<li><a th:href="@{/review(id=${review.id})}" th:text="${review.title}"></a></li>	
 	</div>
+	<h3>
+	All reviews are from IMDb.
+	<a href="http://www.imdb.com/"><img src= "images/imdb.png"></a>
+	</h3>
 </body>
 </html>

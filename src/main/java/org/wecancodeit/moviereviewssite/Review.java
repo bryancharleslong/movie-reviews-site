@@ -7,8 +7,8 @@ public class Review {
 	private String imageUrl;
 	private String genre;
 	private String content;
-	private String date;
-	private String synopsis;
+	private String year;
+	private String author;
 
 	public Long getId() {
 		return id;
@@ -18,19 +18,36 @@ public class Review {
 		return title;
 	}
 	
+	public String getImageUrl() {
+		return imageUrl;
+	}
+	
+
 	public String getGenre() {
 		return genre;
 	}
 	
-	public Review(Long id, String title, String imageUrl, String genre, String content, String date,
-			String synopsis) {
+	public String getContent() {
+		return content;
+	}
+	
+	public String getYear() {
+		return year;
+	}
+	
+	public String getAuthor() {
+		return author;
+	}
+	
+	public Review(Long id, String title, String imageUrl, String genre, String content, String year,
+			String author) {
 		this.id = id;
 		this.title = title;
 		this.imageUrl = imageUrl;
 		this.genre = genre;
 		this.content = content;
-		this.date = date;
-		this.synopsis = synopsis;
+		this.year = year;
+		this.author = author;
 	}
 
 
