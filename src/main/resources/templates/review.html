@@ -1,27 +1,23 @@
 <!DOCTYPE html>
-<html  xmlns:th="http://www.thymeleaf.org">
-<head>
-	<title>
-	<div th:remove = "tag" th:each ="review: ${reviews}">
-	<p th:remove ="tag" th:text = "${review.title}"></p>
-	</div>
-	</title>
-	<link rel='stylesheet' href='style.css'/>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:each="review: ${reviews}">
+<title th:text="${review.title}"></title>
+<link rel='stylesheet' href='style.css' />
 </head>
 <body>
-	<div th:each ="review: ${reviews}">
-	<h1>
-		<p th:text = "${review.title}"></p>
-		<img th:src="@{${review.imageUrl}}" alt="creative commons image" height="200px">
-	</h1>
-	<h2>
-		<a th:text = "${review.genre}"></a>
-		<a th:text = "${review.year}"></a>
-	</h2>	
-	<span><p th:text = "${review.content}"></p></span>
-	<p class = "author"  th:text = "'-'+${review.author}"></p>
-	<p><a href="http://localhost:8080/show-reviews">Back to home</a></p>
+	<div th:each="review: ${reviews}">
+		<h1 th:text="${review.title}"></h1>
+		<img th:src="@{${review.imageUrl}}" alt="creative commons image"
+			height="200px">
+		<h2>
+			<a th:text="${review.genre}"></a> <a th:text="${review.year}"></a>
+		</h2>
+		<p class="content" th:text="${review.content}"></p>
+		<p class="author" th:text="'-'+${review.author}"></p>
+		<p>
+			<a href="http://localhost:8080/show-reviews">Back to home</a>
+		</p>
 	</div>
-	
+
 </body>
 </html>

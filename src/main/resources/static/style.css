@@ -1,29 +1,33 @@
 body {
- 	color: #414141;
- 	background-color: #EEEEEE;
- 	font-size: 18px;
- 	text-align: center;
+	color: #414141;
+	background-color: #EEEEEE;
+	font-size: 18px;
+	text-align: center;
 }
-span{
- 	white-space: pre-line;
- 	text-align: left;
-}
+
 h1 {
 	font-size: 2em;
 }
+
 h2 {
 	font-size: 1.3em;
 }
+
 h3 {
 	font-size: 1em;
 }
+
 li {
+	line-height: 80%;
 	width: 300px;
 	text-align: left;
 	position: relative;
 	left: 50%;
 	margin-left: -150px;
+	width: 300px;
 }
-.author {
+
+.author, .content {
+	white-space: pre-line;
 	text-align: left;
 }
