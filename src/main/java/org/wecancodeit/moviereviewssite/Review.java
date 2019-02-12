@@ -1,5 +1,7 @@
 package org.wecancodeit.moviereviewssite;
 
+import java.util.List;
+
 public class Review {
 
 	private Long id;
@@ -9,6 +11,7 @@ public class Review {
 	private String content;
 	private String year;
 	private String author;
+	private List<String> tags;
 
 	public Long getId() {
 		return id;
@@ -39,8 +42,12 @@ public class Review {
 		return author;
 	}
 	
+	public List<String> getTags() {
+		return tags;
+	}
+	
 	public Review(Long id, String title, String imageUrl, String genre, String content, String year,
-			String author) {
+			String author, List<String> tags) {
 		this.id = id;
 		this.title = title;
 		this.imageUrl = imageUrl;
@@ -48,6 +55,7 @@ public class Review {
 		this.content = content;
 		this.year = year;
 		this.author = author;
+		this.tags = tags;
 	}
 
 

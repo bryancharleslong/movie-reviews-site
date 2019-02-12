@@ -1,7 +1,11 @@
 package org.wecancodeit.moviereviewssite;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
@@ -9,14 +13,23 @@ import org.springframework.stereotype.Repository;
 public class ReviewRepository {
 
 	HashMap<Long, Review> reviewList = new HashMap<>();
-	// (id, title, imageUrl, genre, content, year, author)
+	// (id, title, imageUrl, genre, content, year, author, tags)
+
+	List<String> tagsOne = Arrays.asList("color", "fantasy", "PG-13");
+	List<String> tagsTwo = Arrays.asList("color", "R");
+	List<String> tagsThree = Arrays.asList("color", "R");
+	List<String> tagsFour = Arrays.asList("color", "fantasy", "PG-13");
+	List<String> tagsFive = Arrays.asList("black and white", "PG");
+	List<String> tagsSix = Arrays.asList("color", "R");
+	List<String> tagsSeven = Arrays.asList("black and white", "PG");
+
 	Review one = new Review(1L, "Groundhog Day", "images/groundhog.jpg", "Comedy, Fantasy, Romance",
 			"It's kind of hard to pinpoint what makes 'Groundhog Day' work just right- many movies have great premises, some even a bit more ambitious than this one (though not as heartfelt, maybe) but fail. I think that 'ratedness' may play a bigger role than people imagine. For example, this movie came out a bit before my time, and because of that I missed the trailers and stuff for when the film came out. Even so, people that were around when 'Groundhog' came out in the theatres, might've also thought it was underrated, as the title 'Groundog Day' doesn't necessarily *try* to draw in huge crowds.\r\n"
 					+ "\r\n"
 					+ "OK...all my above rambling means one thing: I loved 'Groundhog Day', but I'm embarrassed I didn't watch it sooner. Having the typical Generation X-er mentality I assumed this film would have outdated humour- but let me assure you (and seeing Rushmore confirmed this for me) -Bill Murray and his humour will NEVER go out of style; he is fabulous. He takes just the right amount of self-deprication (not too much) and combines it with cynicism....well I don't want to try to *define* his humour- the easiest way would be to watch him in action! Also, the writing for this film is absolutely perfect.\r\n"
 					+ "\r\n"
 					+ "Go see for yourselves... and hope that ONE DAY the groundhog will actually NOT see his shadow......lol",
-			"1993", "renaldo and clara");
+			"1993", "renaldo and clara", tagsOne);
 	Review two = new Review(2L, "The Good, the Bad and the Ugly", "images/cowboy.jpg", "Western",
 			"A sprawling Western epic that follows the adventures of three gunfighters looking for $200,000 in stolen gold, Sergio Leone's `The Good, the Bad, and the Ugly' is a masterpiece, one that continues to get better and better with each viewing. In a way, it's a morality play, weighing the consequences of good and evil, but it does so in a realistic manner. Sometimes, crime does pay, at least in the short term, and sometimes good does go unrewarded. This film probably signaled the death knell of the traditional John Wayne `White Hat/Black Hat' Western.\r\n"
 					+ "\r\n"
@@ -25,10 +38,10 @@ public class ReviewRepository {
 					+ "The movie is long, but there's not a wasted scene in the film. Each one slowly lets the film unfold with a certain style and grace, revealing more about each character and what's going on. The pacing is incredible, as is the direction - Sergio Leone manages to build a lot of uncomfortable tension in the film, keeping the film from ever getting predictable. Any typical Western cliché that you can possibly think of is either given a unique twist or utterly destroyed by Leone's masterful storytelling. Of special mention is Ennio Morricone's score, which is absolutely perfect. Two scenes - one in a Union prison camp, one in the climatic gunfight in the cemetery at the end of the film - are amazing on their own, but they become absolutely astonishing with combined with Morricone's powerful score. \r\n"
 					+ "\r\n"
 					+ "This movie is absolutely brilliant. If you haven't seen it yet, I strongly urge to do so. Immediately. (And then, go watch `Unforgiven' . . . in a way, I think that `Unforgiven' is the sequel to `The Good, the Bad, and the Ugly - it's the story of what eventually happened to the Man With No Name.) `The Good, the Bad, and the Ugly' is easily one of the best Westerns ever made. A++",
-			"1966", "MadReviewer");
+			"1966", "MadReviewer", tagsTwo);
 	Review three = new Review(3L, "The Silence of the Lambs", "images/knife.jpg", " Crime, Drama, Thriller",
 			"The Silence of the Lambs, having accomplished the rare feat of winning all five of the major Academy Award categories, is a remarkable achievement in filmmaking. Gruesome, pulpish material was transformed by dedicated participants on all levels of production, and a film that would have failed in the hands of many others wound up becoming a modern masterpiece. Taut direction and a superb screenplay might be the best arguments for the film's power, but the flashiest are certainly delivered in the bravura performances of Hopkins and Foster. Their interplay -- and remember, they only share a handful of scenes together -- is nothing short of riveting.",
-			"1991", "pooch-8");
+			"1991", "pooch-8", tagsThree);
 	Review four = new Review(4L, "Inception", "images/top.jpg", "Action, Adventure, Sci-Fi",
 			"Inception is truly one of a kind. A concept which has long gestated in Christopher Nolan's mind, his eye for drama mixed with his large scale sensibilities ring true in Blockbuster season making Inception a true original in the sea of reboots, remakes and sequels.\r\n"
 					+ "\r\n"
@@ -37,7 +50,7 @@ public class ReviewRepository {
 					+ "With this complex movie in it's high concept, a stellar cast is needed. And Nolan as always, delivers with just that. This is vintage DiCaprio, perhaps only equalled in The Aviator, which is even more impressive as his role as Cobb in Inception is not a showy one, needing DiCaprio to be the constant at the centre of the film. And he pulls off Cobb's emotional contradictions sublimely. The rest of the cast members all shine in parts of the films, Cillian Murphy shows off his usually non-existent tender side, Gordon-Levitt bottles his usual charm for his confidently reserved turn as the reliable Arthur, Watanabe is devilish as the seemingly ambiguous Saito, Page shows why she's the next big female star and Tom Hardy revels in being the comic relief of the film compared to his recent turns as decidedly psychopathic characters.\r\n"
 					+ "\r\n"
 					+ "Overall, Nolan has indeed surpassed himself. He has created a world as expansive as his Gotham, a plot dwarfing the intricacies of Memento and one which blows The Prestige's cinematic reveal out of the water. This is truly unmissable cinema. Revel in it, we've still got to wait a whole two years before Batman 3.",
-			"2010", "marcusdean118");
+			"2010", "marcusdean118", tagsFour);
 	Review five = new Review(5L, "Seven Samurai", "images/castle.jpg", "Adventure, Drama",
 			"Donald Richie thought it was Kurosawa's finest, and suggested that it might the best Japanese film ever made. \r\n"
 					+ "\r\n"
@@ -64,7 +77,7 @@ public class ReviewRepository {
 					+ "The filmography is ground-breaking: the multiple cameras, slow-motion and attention to light and composition make each frame worthy of an 8X10 glossy. How can individual moments of such beauty be sustained throughout the movement of the film? It is an astonishing feat. And, best of all, no image degenerates into interior design or vacuous prettiness...everything forwards the movement of the cinematic experience. When the film ends, we feel as if we have lived it! \r\n"
 					+ "\r\n"
 					+ "It is with great respect and humility that I offer my thanks to the memory of Mr. Kurosawa. His great work leads us to treasure humanity and its struggles, to develop our own abilities to feel compassion, encourages us to try to make good choices, to be socially and morally responsible, to embrace life.",
-			"1954", "yippeiokiyay");
+			"1954", "yippeiokiyay", tagsFive);
 	Review six = new Review(6L, "Saving Private Ryan", "images/tank.jpg", "Drama, War",
 			"To think that this movie did not win Best Picture is a crime. Director Steven Spielberg uses all of his talent and resources to give to the world the greatest war film ever made.\r\n"
 					+ "\r\n"
@@ -73,7 +86,7 @@ public class ReviewRepository {
 					+ "Spielberg is able to take you into action and make you feel as if you are a participant in the movie and not just a viewer. This is Tom Hanks' best movie he ever did. Forget his performances in Philadelphia and Forrest Gump (though they were also good); he should have received another Oscar for the role of Capt. John Miller, a leader who must act strong in front of his men, but must also hide his emotions from them. It would have been well-deserved if he won again.\r\n"
 					+ "\r\n"
 					+ "I give this movie my highest recommendation. Saving Private Ryan is a movie that makes you realize how life is precious and how honor and duty, though they are deep philosophical concepts that are praised in war, can put you in jeopardy of losing your life for something you may not believe in.",
-			"1998", "morales123");
+			"1998", "morales123", tagsSix);
 	Review seven = new Review(7L, "Casablanca", "images/plane.jpg", "Drama, Romance, War",
 			"Spoilers ahead, but then again, who isn't familiar with Casablanca, even if one hasn't seen it?\r\n"
 					+ "\r\n"
@@ -88,7 +101,7 @@ public class ReviewRepository {
 					+ "So is there a weakest link in 'Casablanca'? Every film, no matter how close to perfection, has a minor flaw or two, so one can find them in 'Casablanca', too, if one really tries hard. So yes, one might ask how much sense the entire mumbo jumbo about the letters of transit makes. One might point out that Paul Henreid, although his performance is certainly good, doesn't come close to the greatness of any of his co-stars. However, the film is so close to perfection that I'm almost ashamed that I'm so desperately trying to find less-than-perfect elements.\r\n"
 					+ "\r\n"
 					+ "So whatever films will come, how many sequels will overflow the screen, and how much junk we will have to sit through, one thing is certain if we're desperate to see a great film: We'll always have Casablanca!",
-			"1942", "RWiggum");
+			"1942", "RWiggum", tagsSeven);
 
 	public ReviewRepository() {
 		reviewList.put(1L, one);
@@ -113,6 +126,33 @@ public class ReviewRepository {
 
 	public Collection<Review> findAll() {
 		return reviewList.values();
+	}
+	
+	@SuppressWarnings("null")
+	public List<String> allTags(){
+		List<String> allTags = null;
+		Collection<Review> allReviews = reviewList.values();
+		for(Review review: allReviews) {
+			List<String> tags = review.getTags();
+			for(String tag: tags) {
+				if(!allTags.contains(tag)) {
+					allTags.add(tag);
+				}
+			}
+		}
+		return allTags;
+	}
+	
+	@SuppressWarnings("null")
+	public Collection<Review> findAllTag(String tag) {
+		Collection<Review> reviewsWithTag = null;
+		for(Review review: reviewList.values()) {
+			List<String> tags = review.getTags();
+			if(tags.contains(tag)) {
+				reviewsWithTag.add(review);
+			}
+		}
+		return reviewsWithTag;
 	}
 
 }
