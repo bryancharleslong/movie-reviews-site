@@ -17,7 +17,7 @@ public class ReviewRepository {
 
 
 	public ReviewRepository() {
-		List<String> tagsOne = Arrays.asList("color", "fantasy", "PG-13");
+		List<String> tagsOne = Arrays.asList("in color", "fantasy", "rated PG-13");
 		Review one = new Review(1L, "Groundhog Day", "images/groundhog.jpg", "Comedy, Fantasy, Romance",
 				"It's kind of hard to pinpoint what makes 'Groundhog Day' work just right- many movies have great premises, some even a bit more ambitious than this one (though not as heartfelt, maybe) but fail. I think that 'ratedness' may play a bigger role than people imagine. For example, this movie came out a bit before my time, and because of that I missed the trailers and stuff for when the film came out. Even so, people that were around when 'Groundhog' came out in the theatres, might've also thought it was underrated, as the title 'Groundog Day' doesn't necessarily *try* to draw in huge crowds.\r\n"
 						+ "\r\n"
@@ -25,7 +25,7 @@ public class ReviewRepository {
 						+ "\r\n"
 						+ "Go see for yourselves... and hope that ONE DAY the groundhog will actually NOT see his shadow......lol",
 						"1993", "renaldo and clara", tagsOne);
-		List<String> tagsTwo = Arrays.asList("color", "R");
+		List<String> tagsTwo = Arrays.asList("in color", "rated R");
 		Review two = new Review(2L, "The Good, the Bad and the Ugly", "images/cowboy.jpg", "Western",
 				"A sprawling Western epic that follows the adventures of three gunfighters looking for $200,000 in stolen gold, Sergio Leone's `The Good, the Bad, and the Ugly' is a masterpiece, one that continues to get better and better with each viewing. In a way, it's a morality play, weighing the consequences of good and evil, but it does so in a realistic manner. Sometimes, crime does pay, at least in the short term, and sometimes good does go unrewarded. This film probably signaled the death knell of the traditional John Wayne `White Hat/Black Hat' Western.\r\n"
 						+ "\r\n"
@@ -35,7 +35,7 @@ public class ReviewRepository {
 						+ "\r\n"
 						+ "This movie is absolutely brilliant. If you haven't seen it yet, I strongly urge to do so. Immediately. (And then, go watch `Unforgiven' . . . in a way, I think that `Unforgiven' is the sequel to `The Good, the Bad, and the Ugly - it's the story of what eventually happened to the Man With No Name.) `The Good, the Bad, and the Ugly' is easily one of the best Westerns ever made. A++",
 						"1966", "MadReviewer", tagsTwo);
-		List<String> tagsThree = Arrays.asList("color", "R");
+		List<String> tagsThree = Arrays.asList("in color", "rated R");
 		Review three = new Review(3L, "The Silence of the Lambs", "images/knife.jpg", " Crime, Drama, Thriller",
 				"The Silence of the Lambs, having accomplished the rare feat of winning all five of the major Academy Award categories, is a remarkable achievement in filmmaking. Gruesome, pulpish material was transformed by dedicated participants on all levels of production, and a film that would have failed in the hands of many others wound up becoming a modern masterpiece. Taut direction and a superb screenplay might be the best arguments for the film's power, but the flashiest are certainly delivered in the bravura performances of Hopkins and Foster. Their interplay -- and remember, they only share a handful of scenes together -- is nothing short of riveting.",
 				"1991", "pooch-8", tagsThree);
@@ -49,7 +49,7 @@ public class ReviewRepository {
 						+ "\r\n"
 						+ "Overall, Nolan has indeed surpassed himself. He has created a world as expansive as his Gotham, a plot dwarfing the intricacies of Memento and one which blows The Prestige's cinematic reveal out of the water. This is truly unmissable cinema. Revel in it, we've still got to wait a whole two years before Batman 3.",
 						"2010", "marcusdean118", tagsFour);
-		List<String> tagsFive = Arrays.asList("black and white", "PG");
+		List<String> tagsFive = Arrays.asList("in black and white", "rated PG");
 		Review five = new Review(5L, "Seven Samurai", "images/castle.jpg", "Adventure, Drama",
 				"Donald Richie thought it was Kurosawa's finest, and suggested that it might the best Japanese film ever made. \r\n"
 						+ "\r\n"
@@ -77,7 +77,7 @@ public class ReviewRepository {
 						+ "\r\n"
 						+ "It is with great respect and humility that I offer my thanks to the memory of Mr. Kurosawa. His great work leads us to treasure humanity and its struggles, to develop our own abilities to feel compassion, encourages us to try to make good choices, to be socially and morally responsible, to embrace life.",
 						"1954", "yippeiokiyay", tagsFive);
-		List<String> tagsSix = Arrays.asList("color", "R");
+		List<String> tagsSix = Arrays.asList("in color", "rated R");
 		Review six = new Review(6L, "Saving Private Ryan", "images/tank.jpg", "Drama, War",
 				"To think that this movie did not win Best Picture is a crime. Director Steven Spielberg uses all of his talent and resources to give to the world the greatest war film ever made.\r\n"
 						+ "\r\n"
@@ -87,7 +87,7 @@ public class ReviewRepository {
 						+ "\r\n"
 						+ "I give this movie my highest recommendation. Saving Private Ryan is a movie that makes you realize how life is precious and how honor and duty, though they are deep philosophical concepts that are praised in war, can put you in jeopardy of losing your life for something you may not believe in.",
 						"1998", "morales123", tagsSix);
-		List<String> tagsSeven = Arrays.asList("black and white", "PG");
+		List<String> tagsSeven = Arrays.asList("in black and white", "rated PG");
 		Review seven = new Review(7L, "Casablanca", "images/plane.jpg", "Drama, Romance, War",
 				"Spoilers ahead, but then again, who isn't familiar with Casablanca, even if one hasn't seen it?\r\n"
 						+ "\r\n"
@@ -126,7 +126,7 @@ public class ReviewRepository {
 	public Collection<Review> findAll() {
 		return reviewList.values();
 	}
-
+	//not currently used, could be used for template with a list of all tags
 	@SuppressWarnings("null")
 	public List<String> allTags() {
 		List<String> allTags = null;
