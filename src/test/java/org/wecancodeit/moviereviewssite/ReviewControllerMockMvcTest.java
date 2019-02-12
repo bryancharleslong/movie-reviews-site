@@ -54,7 +54,7 @@ public class ReviewControllerMockMvcTest {
 	}
 	
 	@Test
-	public void shouldBeOkForOneReview() throws Exception {
+	public void shouldBeOkForOneReview() throws Exception { //works without "tags" attribute for model in ReviewController
 		mvc.perform(get("/review?id=1")).andExpect(status().isOk());
 	}
 	
@@ -70,9 +70,9 @@ public class ReviewControllerMockMvcTest {
 	}
 	@Test
 	public void shouldPutReviewsWithTagIntoModel() throws Exception {
-		Collection<Review> allReviews = asList(firstReview);
-		when(repository.findAllWithTag("color")).thenReturn(allReviews);
-		mvc.perform(get("/show-tag?tag=color")).andExpect(model().attribute("reviews", is(allReviews)));
+		Collection<Review> allReviewsWithTag = asList(firstReview);
+		when(repository.findAllWithTag("color")).thenReturn(allReviewsWithTag);
+		mvc.perform(get("/show-tag?tag=color")).andExpect(model().attribute("reviews", is(allReviewsWithTag)));
 	}
 
 }

@@ -12,7 +12,7 @@
 		<h2>
 			<a th:text="${review.genre}"></a> <a th:text="${review.year}"></a>
 		</h2>
-		<div th:each="tag: ${tags}">
+		<div th:each="tag: ${review.tags}">
 			<a th:text = "${tag}" th:href="@{/show-tag(tag=${tag})}"></a>
 		</div>
 		<p class="content" th:text="${review.content}"></p>

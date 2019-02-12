@@ -22,7 +22,7 @@ public class ReviewController {
 	@RequestMapping("/review")
 	public String findOneReview(@RequestParam(value="id") Long id, Model model) {
 		model.addAttribute("reviews",reviewRepo.findOne(id));
-		model.addAttribute("tags", reviewRepo.findOne(id).getTags());
+		//model.addAttribute("tags", reviewRepo.findOne(id).getTags()); //this breaks test shouldBeOkForOneReview. changed thymeleaf html, so not needed
 		return "review";
 	}
 	
