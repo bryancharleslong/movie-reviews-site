@@ -2,11 +2,12 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <title>Reviews with tag</title>
+<link rel='stylesheet' href='style.css' />
 </head>
 <body>
 	<h1>Reviews with tag</h1>
 	<div th:each="review: ${reviews}">
-		<a th:text="${review.title}">review titles</a>
+		<a th:href="@{/review(id=${review.id})}" th:text="${review.title}">review titles</a>
 
 	</div>
 	<p>

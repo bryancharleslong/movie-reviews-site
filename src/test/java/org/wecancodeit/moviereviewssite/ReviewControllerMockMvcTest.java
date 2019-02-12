@@ -68,5 +68,11 @@ public class ReviewControllerMockMvcTest {
 		when(repository.findOne(1L)).thenReturn(firstReview);
 		mvc.perform(get("/review?id=1")).andExpect(model().attribute("reviews", is(firstReview)));
 	}
+	@Test
+	public void shouldPutReviewsWithTagIntoModel() throws Exception {
+		Collection<Review> allReviews = asList(firstReview);
+		when(repository.findAllWithTag("color")).thenReturn(allReviews);
+		mvc.perform(get("/show-tag?tag=color")).andExpect(model().attribute("reviews", is(allReviews)));
+	}
 
 }
