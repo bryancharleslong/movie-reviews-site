@@ -54,7 +54,7 @@ public class ReviewControllerMockMvcTest {
 	}
 	
 	@Test
-	public void shouldBeOkForOneReview() throws Exception { //works without "tags" attribute for model in ReviewController
+	public void shouldBeOkForOneReview() throws Exception {
 		mvc.perform(get("/review?id=1")).andExpect(status().isOk());
 	}
 	
