@@ -3,7 +3,6 @@ package org.wecancodeit.moviereviewssite;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
@@ -127,28 +126,28 @@ public class ReviewRepository {
 	public Collection<Review> findAll() {
 		return reviewList.values();
 	}
-	
+
 	@SuppressWarnings("null")
-	public List<String> allTags(){
+	public List<String> allTags() {
 		List<String> allTags = null;
 		Collection<Review> allReviews = reviewList.values();
-		for(Review review: allReviews) {
+		for (Review review : allReviews) {
 			List<String> tags = review.getTags();
-			for(String tag: tags) {
-				if(!allTags.contains(tag)) {
+			for (String tag : tags) {
+				if (!allTags.contains(tag)) {
 					allTags.add(tag);
 				}
 			}
 		}
 		return allTags;
 	}
-	
+
 	@SuppressWarnings("null")
-	public Collection<Review> findAllTag(String tag) {
-		Collection<Review> reviewsWithTag = null;
-		for(Review review: reviewList.values()) {
+	public Collection<Review> findAllWithTag(String tag) {
+		ArrayList<Review> reviewsWithTag = new ArrayList<>();
+		for (Review review : reviewList.values()) {
 			List<String> tags = review.getTags();
-			if(tags.contains(tag)) {
+			if (tags.contains(tag)) {
 				reviewsWithTag.add(review);
 			}
 		}
