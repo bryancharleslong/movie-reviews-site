@@ -4,6 +4,7 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -29,5 +30,10 @@ public class ReviewController {
 	public String findAllReviewWithTag(@RequestParam(value = "tag") String tag, Model model ) {
 		model.addAttribute("reviews", reviewRepo.findAllWithTag(tag));
 		return "tagReviews";
+	}
+	
+	@GetMapping("/")
+	public String getReviews() {
+	    return "redirect:/show-reviews";
 	}
 }

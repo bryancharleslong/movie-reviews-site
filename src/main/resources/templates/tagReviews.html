@@ -3,12 +3,15 @@
 <head>
 <title>Reviews with tag</title>
 <link rel='stylesheet' href='style.css' />
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
 </head>
 <body>
 	<h1>Reviews with tag</h1>
 	<div th:each="review: ${reviews}">
-		<a th:href="@{/review(id=${review.id})}" th:text="${review.title}">review titles</a>
-
+		<ul>
+			<li><a th:href="@{/review(id=${review.id})}" th:text="${review.title}">review
+				titles</a></li>
+		</ul>
 	</div>
 	<p>
 		<a href="http://localhost:8080/show-reviews">Back to home</a>
