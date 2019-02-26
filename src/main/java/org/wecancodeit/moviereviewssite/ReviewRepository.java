@@ -39,7 +39,7 @@ public class ReviewRepository {
 		Review three = new Review(3L, "The Silence of the Lambs", "images/knife.jpg", " Crime, Drama, Thriller",
 				"The Silence of the Lambs, having accomplished the rare feat of winning all five of the major Academy Award categories, is a remarkable achievement in filmmaking. Gruesome, pulpish material was transformed by dedicated participants on all levels of production, and a film that would have failed in the hands of many others wound up becoming a modern masterpiece. Taut direction and a superb screenplay might be the best arguments for the film's power, but the flashiest are certainly delivered in the bravura performances of Hopkins and Foster. Their interplay -- and remember, they only share a handful of scenes together -- is nothing short of riveting.",
 				"1991", "pooch-8", tagsThree);
-		List<String> tagsFour = Arrays.asList("color", "fantasy", "PG-13");
+		List<String> tagsFour = Arrays.asList("in color", "fantasy", "PG-13");
 		Review four = new Review(4L, "Inception", "images/top.jpg", "Action, Adventure, Sci-Fi",
 				"Inception is truly one of a kind. A concept which has long gestated in Christopher Nolan's mind, his eye for drama mixed with his large scale sensibilities ring true in Blockbuster season making Inception a true original in the sea of reboots, remakes and sequels.\r\n"
 						+ "\r\n"
